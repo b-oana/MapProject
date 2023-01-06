@@ -32,6 +32,27 @@ bool isValid(int board[N][N], int row, int col)
 
 	cout << "---------------------------------------" << endl;
 
+	for (i = 0; i < row; i++)
+	{
+		for (j = 0; j < col; j++)
+		{
+			isTowerPresent = false;
+			for (k = 0; k < col; k++)
+			{
+				if (board[i][k] == 1)
+					isTowerPresent = true;
+			}
+			for (l = 0; l < row; l++)
+			{
+				if (board[l][j] == 1)
+					isTowerPresent = true;
+			}
+			if (!isTowerPresent)
+			{
+				board[i][j] = 1;
+			}
+		}
+	}
 	printBoard(board);
 	return false;
 }
