@@ -12,7 +12,8 @@ void printBoard(int board[N][N])
 	{
 		for (j = 0; j < N; j++)
 		{
-			cout << board[i][j] << "  | ";
+			cout << "_";
+			cout << board[i][j] << "|";
 			cout << " ";
 		}
 		cout << endl;
